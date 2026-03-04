@@ -759,10 +759,61 @@
       </div>
     </div>
 
+
     <!-- PROJECT 7 -->
     <div class="project-card" onclick="toggleCard(this)">
       <div class="card-header">
         <div class="card-number">07</div>
+        <div class="card-content">
+          <div class="card-top-row">
+            <div class="card-title">Open Brain — Cross-Tool AI Memory System</div>
+            <span class="card-status status-active">Active</span>
+          </div>
+          <div class="card-meta">Builder / Architect · <span>Personal / ACRRM</span></div>
+          <p class="card-description">A shared knowledge system that gives every AI tool persistent memory. Built on pgvector embeddings and MCP, Open Brain lets Claude, Gemini, and other AI assistants share context, remember decisions, and pick up where any tool left off — eliminating the “cold start” problem of AI conversations.</p>
+          <div class="card-tags">
+            <span class="tag">MCP</span>
+            <span class="tag">n8n Cloud</span>
+            <span class="tag">PostgreSQL / pgvector</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Railway</span>
+            <span class="tag">OpenAI Embeddings</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-expand-hint"><span class="expand-arrow">▼</span> View detail</div>
+      <div class="card-detail">
+        <div class="card-detail-inner">
+          <div class="detail-section">
+            <div class="detail-label">Problem</div>
+            <p class="detail-text">Every AI conversation starts from zero. Context from a Claude session doesn’t carry to the next one, let alone to Gemini or ChatGPT. Decisions get re-explained, project context gets lost, and working across multiple AI tools means constant repetition. There’s no shared memory layer.</p>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Architecture</div>
+            <div class="detail-arch">AI Tool (Claude/Gemini/ChatGPT) → MCP Protocol → Open Brain Server (Node.js) → n8n Workflows → Neon PostgreSQL + pgvector</div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Key Components</div>
+            <ul class="detail-text">
+              <li><strong>Vector Knowledge Base</strong> — Neon PostgreSQL with pgvector extension. Every piece of saved knowledge gets embedded (OpenAI text-embedding-3-small, 1536 dimensions) for semantic search</li>
+              <li><strong>MCP Server</strong> — Custom Node.js server exposing tools: search_knowledge, save_memory, log_conversation, get_user_context, get_project_context. Supports stdio (local) and SSE (remote) transport</li>
+              <li><strong>n8n Orchestration</strong> — Two core workflows: Document Ingestion (chunk → embed → store) and Semantic Search (embed query → vector similarity → return ranked results)</li>
+              <li><strong>Railway Deployment</strong> — SSE server deployed for remote AI tool access. Claude Desktop uses stdio for low-latency local connection</li>
+              <li><strong>Cross-Tool Memory</strong> — Conversation logs, project decisions, technical patterns, and domain knowledge persist across all connected AI tools</li>
+            </ul>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Outcome</div>
+            <p class="detail-text">Claude now has persistent project context across sessions — it knows the tech stack, past decisions, architectural patterns, and current status without re-explanation. The same knowledge base is accessible from any MCP-compatible AI tool. Currently the primary knowledge store for all automation project context at ACRRM.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 8 -->
+    <div class="project-card" onclick="toggleCard(this)">
+      <div class="card-header">
+        <div class="card-number">08</div>
         <div class="card-content">
           <div class="card-top-row">
             <div class="card-title">QuantConnect Algorithmic Trading</div>
@@ -798,10 +849,10 @@
       </div>
     </div>
 
-    <!-- PROJECT 8 -->
+    <!-- PROJECT 9 -->
     <div class="project-card" onclick="toggleCard(this)">
       <div class="card-header">
-        <div class="card-number">08</div>
+        <div class="card-number">09</div>
         <div class="card-content">
           <div class="card-top-row">
             <div class="card-title">AI-Powered Pokémon Card Cataloguing</div>
