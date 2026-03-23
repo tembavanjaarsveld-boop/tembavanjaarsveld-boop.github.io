@@ -449,51 +449,6 @@
 
 
   /* === TAB SLIDER === */
-  .view-tabs { position:relative; z-index:1; max-width:1100px; margin:0 auto; padding:0 40px 40px; display:flex; align-items:center; gap:0; opacity:0; animation:fadeUp 0.6s ease 0.4s forwards; }
-  .view-tab-track { display:flex; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:4px; position:relative; }
-  .view-tab { font-family:'Space Mono',monospace; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; padding:10px 28px; border:none; background:transparent; color:var(--text-muted); cursor:pointer; position:relative; z-index:2; transition:color 0.3s ease; white-space:nowrap; }
-  .view-tab:hover { color:var(--text-secondary); }
-  .view-tab.active { color:var(--accent); }
-  .tab-slider { position:absolute; top:4px; left:4px; height:calc(100% - 8px); background:rgba(13,217,181,0.08); border:1px solid rgba(13,217,181,0.2); border-radius:6px; transition:transform 0.35s cubic-bezier(0.4,0,0.2,1),width 0.35s cubic-bezier(0.4,0,0.2,1); z-index:1; }
-  .view-panel { transition:opacity 0.35s ease,transform 0.35s ease; }
-  .view-panel.hidden { display:none; }
-  .view-panel.slide-in { animation:slideIn 0.35s cubic-bezier(0.22,1,0.36,1) forwards; }
-  .view-panel.slide-in-rev { animation:slideInRev 0.35s cubic-bezier(0.22,1,0.36,1) forwards; }
-  @keyframes slideIn { from{opacity:0;transform:translateX(40px)} to{opacity:1;transform:translateX(0)} }
-  @keyframes slideInRev { from{opacity:0;transform:translateX(-40px)} to{opacity:1;transform:translateX(0)} }
-
-  /* === GOVERNANCE === */
-  .gov-section { position:relative; z-index:1; padding:0 40px 120px; max-width:1100px; margin:0 auto; }
-  .gov-intro { font-size:17px; color:var(--text-secondary); line-height:1.75; max-width:800px; margin-bottom:48px; }
-  .gov-intro strong { color:var(--text-primary); }
-  .tier-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:56px; }
-  .tier-card { background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:24px 20px; transition:all 0.3s ease; border-top:3px solid transparent; }
-  .tier-card:hover { border-color:var(--border-accent); box-shadow:0 4px 20px rgba(13,217,181,0.06); transform:translateY(-2px); }
-  .tier-card.t-explore { border-top-color:#0dd9b5; }
-  .tier-card.t-validate { border-top-color:#f7b731; }
-  .tier-card.t-preprod { border-top-color:#a55eea; }
-  .tier-card.t-parked { border-top-color:#555570; }
-  .tier-name { font-family:'Space Mono',monospace; font-size:13px; font-weight:700; color:var(--text-primary); margin-bottom:8px; }
-  .tier-purpose { font-size:13px; color:var(--text-secondary); line-height:1.6; margin-bottom:14px; }
-  .tier-label { font-family:'Space Mono',monospace; font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:var(--text-muted); margin-bottom:4px; }
-  .tier-val { font-size:12px; color:var(--text-secondary); line-height:1.5; margin-bottom:10px; }
-  .gov-sub { margin-bottom:48px; }
-  .gov-sub-header { display:flex; align-items:center; gap:16px; margin-bottom:24px; }
-  .gov-sub-title { font-family:'Space Mono',monospace; font-size:12px; letter-spacing:3px; text-transform:uppercase; color:var(--accent); white-space:nowrap; }
-  .gov-sub-line { height:1px; flex:1; background:linear-gradient(90deg,var(--border-accent),transparent); }
-  .principle-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-  .principle-card { background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:24px; transition:all 0.3s ease; }
-  .principle-card:hover { border-color:var(--border-accent); box-shadow:0 4px 20px rgba(13,217,181,0.06); }
-  .p-icon { font-size:22px; margin-bottom:12px; display:block; }
-  .p-title { font-family:'Space Mono',monospace; font-size:13px; font-weight:700; color:var(--text-primary); margin-bottom:8px; }
-  .p-desc { font-size:13px; color:var(--text-secondary); line-height:1.6; }
-  .golden-rules { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-  .golden-rule { background:rgba(13,217,181,0.04); border:1px solid rgba(13,217,181,0.15); border-radius:10px; padding:24px; }
-  .gr-num { font-family:'Space Mono',monospace; font-size:32px; font-weight:700; color:rgba(13,217,181,0.2); line-height:1; margin-bottom:10px; }
-  .gr-text { font-family:'Space Mono',monospace; font-size:13px; font-weight:700; color:var(--accent); line-height:1.5; }
-
-
-  /* === TAB SLIDER === */
   .view-tabs { position:relative; z-index:1; max-width:1100px; margin:0 auto; padding:0 40px 40px; display:flex; opacity:0; animation:fadeUp 0.6s ease 0.4s forwards; }
   .view-tab-track { display:flex; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:4px; position:relative; }
   .view-tab { font-family:'Space Mono',monospace; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; padding:10px 28px; border:none; background:transparent; color:var(--text-muted); cursor:pointer; position:relative; z-index:2; transition:color 0.3s; white-space:nowrap; }
@@ -570,18 +525,6 @@
     <div class="hero-meta-item">Base <span> -  Brisbane, AU</span></div>
   </div>
 </section>
-
-<!-- TAB TOGGLE -->
-<div class="view-tabs">
-  <div class="view-tab-track">
-    <div class="tab-slider" id="tabSlider"></div>
-    <button class="view-tab active" onclick="switchView('projects')" id="tab-projects">Projects</button>
-    <button class="view-tab" onclick="switchView('governance')" id="tab-governance">Governance</button>
-  </div>
-</div>
-
-<!-- VIEW: PROJECTS -->
-<div id="view-projects" class="view-panel">
 
     <div class="view-tabs">
       <div class="view-tab-track">
@@ -1014,158 +957,86 @@
 </div>
 
 <!-- VIEW: GOVERNANCE -->
-<div id="view-governance" class="view-panel hidden">
-<section class="gov-section">
-  <div class="section-header">
-    <span class="section-title">AI Governance Framework</span>
-    <div class="section-line"></div>
-  </div>
-
-  <p class="gov-intro">I believe the core challenge in enterprise AI is managing the tension between <strong>speed and control</strong>. Engineers want to move fast, risk teams need assurance, and both are right. The answer is building a structure where <strong>governance scales with risk</strong> - not a blanket process that treats every experiment the same.</p>
-
-  <div class="gov-sub">
-    <div class="gov-sub-header"><span class="gov-sub-title">Tiered Experimentation</span><div class="gov-sub-line"></div></div>
-    <div class="tier-grid">
-      <div class="tier-card t-explore"><div class="tier-name">Explore</div><div class="tier-purpose">Open experimentation. Test new models, spike ideas, break things.</div><div class="tier-label">Governance</div><div class="tier-val">Minimal. Token budget caps. No formal sign-off.</div><div class="tier-label">Data Access</div><div class="tier-val">Synthetic and public data only.</div></div>
-      <div class="tier-card t-validate"><div class="tier-name">Validate</div><div class="tier-purpose">Structured experimentation tied to a business case. Time-boxed, outcomes tracked.</div><div class="tier-label">Governance</div><div class="tier-val">Business case required. Token spend tracked. Regular review.</div><div class="tier-label">Data Access</div><div class="tier-val">Anonymised datasets with data team approval.</div></div>
-      <div class="tier-card t-preprod"><div class="tier-name">Pre-prod</div><div class="tier-purpose">Production-mirror. Proves a validated experiment works under real conditions.</div><div class="tier-label">Governance</div><div class="tier-val">Full governance: security review, data audit, legal sign-off.</div><div class="tier-label">Data Access</div><div class="tier-val">Production-equivalent data with audit logging.</div></div>
-      <div class="tier-card t-parked"><div class="tier-name">Parked</div><div class="tier-purpose">Promising tech, wrong timing. Preserved with reactivation triggers.</div><div class="tier-label">Governance</div><div class="tier-val">Documented reason. Tagged triggers. Monthly review.</div><div class="tier-label">Data Access</div><div class="tier-val">No active access. Artefacts preserved.</div></div>
-    </div>
-    <p class="gov-intro" style="font-size:14px;color:var(--text-muted);margin-top:-32px;">The Parked tier is where most labs programs get it wrong. They treat “not yet” as “no” and good ideas quietly die. Tagging experiments with reactivation triggers turns the backlog into a strategic asset.</p>
-  </div>
-
-  <div class="gov-sub">
-    <div class="gov-sub-header"><span class="gov-sub-title">Core Principles</span><div class="gov-sub-line"></div></div>
-    <div class="principle-grid">
-      <div class="principle-card"><span class="p-icon">🛡️</span><div class="p-title">Human-in-the-Loop</div><div class="p-desc">AI drafts, humans decide. No experiment graduates between tiers without the right eyes on it. Review gates are co-designed with risk and legal teams.</div></div>
-      <div class="principle-card"><span class="p-icon">🔍</span><div class="p-title">Transparent by Default</div><div class="p-desc">Every experiment gets a data classification, role-based access controls, and automatic audit trails. Decision logic and confidence signals are visible.</div></div>
-      <div class="principle-card"><span class="p-icon">🔒</span><div class="p-title">Governance at the Gate</div><div class="p-desc">Security reviews happen at defined gates between tiers, not as ad-hoc requests. Light-touch at Explore, progressively tighter toward production.</div></div>
-      <div class="principle-card"><span class="p-icon">📊</span><div class="p-title">If It’s Not Tracked, It Didn’t Happen</div><div class="p-desc">Real-time dashboards, budget caps per tier, chargeback models. The key metric: conversion rate through the funnel - Explore to Validate to Production.</div></div>
-      <div class="principle-card"><span class="p-icon">👥</span><div class="p-title">People, Not Resources</div><div class="p-desc">For every production experiment, measure the impact on roles transparently. Frame outcomes around productivity, not replacement. Partner with HR early on upskilling.</div></div>
-      <div class="principle-card"><span class="p-icon">🔄</span><div class="p-title">Model Agnostic</div><div class="p-desc">Back the field, not the horse. No vendor lock-in. Swap models by capability, cost, and compliance - not habit.</div></div>
-    </div>
-  </div>
-
-  <div class="gov-sub">
-    <div class="gov-sub-header"><span class="gov-sub-title">Golden Rules</span><div class="gov-sub-line"></div></div>
-    <div class="golden-rules">
-      <div class="golden-rule"><div class="gr-num">01</div><div class="gr-text">People, not resources. Always productivity gains. Never headcount.</div></div>
-      <div class="golden-rule"><div class="gr-num">02</div><div class="gr-text">If it’s not tracked, it didn’t happen.</div></div>
-      <div class="golden-rule"><div class="gr-num">03</div><div class="gr-text">Model agnostic. Back the field, not the horse.</div></div>
-    </div>
-  </div>
-
-</section>
-</div>
-
 
     </div><!-- /view-projects -->
 
     <div id="view-governance" class="view-panel">
-      <section class="governance-section">
-        <div class="section-header">
+      <section class="gov-section">
+        <div class="gov-intro">
           <h2>AI Governance Framework</h2>
-          <p>A tiered experimentation model that balances speed with safety. Gates are co-designed with risk and legal teams, embedded into workflows rather than bolted on after the fact.</p>
+          <p>A tiered experimentation model that balances speed with safety. Gates are co-designed with risk and legal, embedded into workflows - not bolted on.</p>
         </div>
 
         <div class="tier-grid">
           <div class="tier-card">
-            <div class="tier-badge tier-explore">Explore</div>
-            <div class="tier-title">Sandbox Experimentation</div>
-            <p class="tier-desc">Rapid prototyping with synthetic or dummy data. Minimal governance overhead. Teams can spin up experiments freely to test feasibility before committing resources.</p>
-            <div class="tier-details">
-              <span class="tag">Synthetic Data Only</span>
-              <span class="tag">No Approval Gate</span>
-              <span class="tag">Time-boxed</span>
-            </div>
+            <div class="t-explore">Explore</div>
+            <div class="tier-name">Sandbox Experimentation</div>
+            <div class="tier-purpose">Rapid prototyping with synthetic or dummy data. Minimal governance overhead. Teams spin up experiments freely to test feasibility.</div>
+            <div class="tier-label">Data <span class="tier-val">Synthetic Only</span></div>
+            <div class="tier-label">Gate <span class="tier-val">None</span></div>
+            <div class="tier-label">Scope <span class="tier-val">Time-boxed</span></div>
           </div>
-
           <div class="tier-card">
-            <div class="tier-badge tier-validate">Validate</div>
-            <div class="tier-title">Business Case &amp; Controlled Testing</div>
-            <p class="tier-desc">Requires a documented business case and stakeholder sign-off. Uses anonymised production data. This is the handover point where the initiative gets a formal owner and budget allocation.</p>
-            <div class="tier-details">
-              <span class="tag">Anonymised Data</span>
-              <span class="tag">Business Case Required</span>
-              <span class="tag">Stakeholder Sign-off</span>
-            </div>
+            <div class="t-validate">Validate</div>
+            <div class="tier-name">Business Case + Controlled Testing</div>
+            <div class="tier-purpose">Documented business case and stakeholder sign-off required. Uses anonymised production data. Formal owner and budget allocation assigned.</div>
+            <div class="tier-label">Data <span class="tier-val">Anonymised</span></div>
+            <div class="tier-label">Gate <span class="tier-val">Business Case</span></div>
+            <div class="tier-label">Scope <span class="tier-val">Stakeholder Sign-off</span></div>
           </div>
-
           <div class="tier-card">
-            <div class="tier-badge tier-preprod">Pre-prod</div>
-            <div class="tier-title">Full Governance &amp; Production Readiness</div>
-            <p class="tier-desc">Complete governance review including risk assessment, compliance checks, and security audit. Production data access granted. Human-in-the-loop validation at every decision gate.</p>
-            <div class="tier-details">
-              <span class="tag">Production Data</span>
-              <span class="tag">Risk &amp; Compliance Review</span>
-              <span class="tag">HITL Mandatory</span>
-            </div>
+            <div class="t-preprod">Pre-prod</div>
+            <div class="tier-name">Full Governance + Production Readiness</div>
+            <div class="tier-purpose">Complete governance review: risk assessment, compliance, security audit. Production data access. Human-in-the-loop at every decision gate.</div>
+            <div class="tier-label">Data <span class="tier-val">Production</span></div>
+            <div class="tier-label">Gate <span class="tier-val">Risk + Compliance</span></div>
+            <div class="tier-label">Scope <span class="tier-val">HITL Mandatory</span></div>
           </div>
-
           <div class="tier-card">
-            <div class="tier-badge tier-parked">Parked</div>
-            <div class="tier-title">Preserved with Reactivation Triggers</div>
-            <p class="tier-desc">Initiatives that showed promise but lack current resourcing or timing. Fully documented with clear reactivation criteria so nothing valuable gets lost.</p>
-            <div class="tier-details">
-              <span class="tag">Documented Learnings</span>
-              <span class="tag">Reactivation Criteria</span>
-              <span class="tag">Preserved Assets</span>
-            </div>
+            <div class="t-parked">Parked</div>
+            <div class="tier-name">Preserved with Reactivation Triggers</div>
+            <div class="tier-purpose">Initiatives that showed promise but lack current resourcing. Fully documented with clear reactivation criteria so nothing valuable gets lost.</div>
+            <div class="tier-label">Data <span class="tier-val">Archived</span></div>
+            <div class="tier-label">Gate <span class="tier-val">Reactivation Criteria</span></div>
+            <div class="tier-label">Scope <span class="tier-val">Preserved Assets</span></div>
           </div>
         </div>
 
-        <div class="section-header" style="margin-top: 3rem;">
-          <h2>Operating Principles</h2>
+        <div class="gov-sub">
+          <div class="gov-sub-header">
+            <div class="gov-sub-title">Operating Principles</div>
+            <div class="gov-sub-line"></div>
+          </div>
         </div>
 
-        <div class="principles-grid">
+        <div class="principle-grid">
           <div class="principle-card">
-            <div class="principle-icon">01</div>
-            <h3>Intake Funnel</h3>
-            <p>Every AI initiative enters through a single intake process. No shadow projects. Requests are triaged, scoped, and assigned a tier within 48 hours.</p>
+            <div class="p-icon">01</div>
+            <div class="p-title">Intake Funnel</div>
+            <p class="p-desc">Every AI initiative enters through a single intake process. No shadow projects. Requests triaged, scoped, and assigned a tier within 48 hours.</p>
           </div>
           <div class="principle-card">
-            <div class="principle-icon">02</div>
-            <h3>2-Week Sprints</h3>
-            <p>All active work runs in agile two-week cycles with demos and retrospectives. Budget caps are enforced per tier to prevent scope creep.</p>
+            <div class="p-icon">02</div>
+            <div class="p-title">2-Week Sprints</div>
+            <p class="p-desc">All active work runs in agile two-week cycles with demos and retros. Budget caps enforced per tier to prevent scope creep.</p>
           </div>
           <div class="principle-card">
-            <div class="principle-icon">03</div>
-            <h3>Chargeback Model</h3>
-            <p>Costs are attributed to requesting business units. This creates natural prioritisation pressure and ensures only high-value work progresses past Explore.</p>
+            <div class="p-icon">03</div>
+            <div class="p-title">Chargeback Model</div>
+            <p class="p-desc">Costs attributed to requesting business units. Creates natural prioritisation pressure - only high-value work progresses past Explore.</p>
           </div>
           <div class="principle-card">
-            <div class="principle-icon">04</div>
-            <h3>Model Agnostic</h3>
-            <p>Back the field, not the horse. No vendor lock-in. Solutions are designed to swap underlying models as the landscape evolves.</p>
+            <div class="p-icon">04</div>
+            <div class="p-title">Model Agnostic</div>
+            <p class="p-desc">Back the field, not the horse. No vendor lock-in. Solutions designed to swap underlying models as the landscape evolves.</p>
           </div>
         </div>
 
         <div class="golden-rules">
-          <h3>The Golden Rules</h3>
-          <div class="golden-rule">
-            <span class="golden-rule-number">I</span>
-            <div>
-              <strong>People, not resources.</strong>
-              <p>Every person on the team is a professional with a career arc. Invest in them accordingly.</p>
-            </div>
-          </div>
-          <div class="golden-rule">
-            <span class="golden-rule-number">II</span>
-            <div>
-              <strong>If it's not tracked, it didn't happen.</strong>
-              <p>Every experiment, decision, and outcome is documented. Institutional memory is a competitive advantage.</p>
-            </div>
-          </div>
-          <div class="golden-rule">
-            <span class="golden-rule-number">III</span>
-            <div>
-              <strong>Model agnostic. Back the field, not the horse.</strong>
-              <p>The AI landscape shifts fast. Architect for flexibility, not for any single provider.</p>
-            </div>
-          </div>
+          <div class="golden-rule"><div class="gr-num">01</div><div class="gr-text">People, not resources. Every person on the team is a professional with a career arc.</div></div>
+          <div class="golden-rule"><div class="gr-num">02</div><div class="gr-text">If it's not tracked, it didn't happen. Every experiment, decision, and outcome is documented.</div></div>
+          <div class="golden-rule"><div class="gr-num">03</div><div class="gr-text">Model agnostic. Back the field, not the horse. Architect for flexibility, not any single provider.</div></div>
         </div>
-
       </section>
     </div><!-- /view-governance -->
 
@@ -1193,45 +1064,6 @@ function closeLightbox() {
   document.getElementById('lightbox').classList.remove('active');
 }
 
-
-function switchView(view) {
-  var tabs = document.querySelectorAll('.view-tab');
-  var panels = document.querySelectorAll('.view-panel');
-  var slider = document.getElementById('tabSlider');
-  var projTab = document.getElementById('tab-projects');
-  var govTab = document.getElementById('tab-governance');
-  
-  tabs.forEach(function(t) { t.classList.remove('active'); });
-  
-  if (view === 'projects') {
-    projTab.classList.add('active');
-    slider.style.width = projTab.offsetWidth + 'px';
-    slider.style.transform = 'translateX(0)';
-    document.getElementById('view-projects').classList.remove('hidden');
-    document.getElementById('view-projects').className = 'view-panel slide-in-rev';
-    document.getElementById('view-governance').classList.add('hidden');
-  } else {
-    govTab.classList.add('active');
-    slider.style.width = govTab.offsetWidth + 'px';
-    slider.style.transform = 'translateX(' + projTab.offsetWidth + 'px)';
-    document.getElementById('view-governance').classList.remove('hidden');
-    document.getElementById('view-governance').className = 'view-panel slide-in';
-    document.getElementById('view-projects').classList.add('hidden');
-  }
-}
-
-// Init slider position on load
-document.addEventListener('DOMContentLoaded', function() {
-  var projTab = document.getElementById('tab-projects');
-  var slider = document.getElementById('tabSlider');
-  if (projTab && slider) {
-    slider.style.width = projTab.offsetWidth + 'px';
-  }
-});
-
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeLightbox();
-});
 
     function switchView(view) {
       const projectsPanel = document.getElementById('view-projects');
