@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Temba — Senior BA / PM · AI Automation</title>
+<title>Temba - Senior BA / PM · AI Automation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -445,6 +445,7 @@
   .project-card:nth-child(7) { animation-delay: 0.4s; }
   .project-card:nth-child(8) { animation-delay: 0.45s; }
   .project-card:nth-child(9) { animation-delay: 0.5s; }
+  .project-card:nth-child(9) { animation-delay: 0.5s; }
 
 
   /* === TAB SLIDER === */
@@ -491,6 +492,49 @@
   .gr-num { font-family:'Space Mono',monospace; font-size:32px; font-weight:700; color:rgba(13,217,181,0.2); line-height:1; margin-bottom:10px; }
   .gr-text { font-family:'Space Mono',monospace; font-size:13px; font-weight:700; color:var(--accent); line-height:1.5; }
 
+
+  /* === TAB SLIDER === */
+  .view-tabs { position:relative; z-index:1; max-width:1100px; margin:0 auto; padding:0 40px 40px; display:flex; opacity:0; animation:fadeUp 0.6s ease 0.4s forwards; }
+  .view-tab-track { display:flex; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:4px; position:relative; }
+  .view-tab { font-family:'Space Mono',monospace; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; padding:10px 28px; border:none; background:transparent; color:var(--text-muted); cursor:pointer; position:relative; z-index:2; transition:color 0.3s; white-space:nowrap; }
+  .view-tab:hover { color:var(--text-secondary); }
+  .view-tab.active { color:var(--accent); }
+  .tab-slider { position:absolute; top:4px; left:4px; height:calc(100% - 8px); background:rgba(13,217,181,0.08); border:1px solid rgba(13,217,181,0.2); border-radius:6px; transition:transform 0.35s cubic-bezier(0.4,0,0.2,1),width 0.35s cubic-bezier(0.4,0,0.2,1); z-index:1; }
+  .view-panel { transition:opacity 0.35s ease,transform 0.35s ease; }
+  .view-panel.hidden { display:none; }
+  .view-panel.slide-in { animation:slideIn 0.35s cubic-bezier(0.22,1,0.36,1) forwards; }
+  .view-panel.slide-in-rev { animation:slideInRev 0.35s cubic-bezier(0.22,1,0.36,1) forwards; }
+  @keyframes slideIn { from{opacity:0;transform:translateX(40px)} to{opacity:1;transform:translateX(0)} }
+  @keyframes slideInRev { from{opacity:0;transform:translateX(-40px)} to{opacity:1;transform:translateX(0)} }
+  .gov-section { position:relative; z-index:1; padding:0 40px 120px; max-width:1100px; margin:0 auto; }
+  .gov-intro { font-size:17px; color:var(--text-secondary); line-height:1.75; max-width:800px; margin-bottom:48px; }
+  .gov-intro strong { color:var(--text-primary); }
+  .tier-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:56px; }
+  .tier-card { background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:24px 20px; transition:all 0.3s; border-top:3px solid transparent; }
+  .tier-card:hover { border-color:var(--border-accent); box-shadow:0 4px 20px rgba(13,217,181,0.06); transform:translateY(-2px); }
+  .tier-card.t-explore { border-top-color:#0dd9b5; }
+  .tier-card.t-validate { border-top-color:#f7b731; }
+  .tier-card.t-preprod { border-top-color:#a55eea; }
+  .tier-card.t-parked { border-top-color:#555570; }
+  .tier-name { font-family:'Space Mono',monospace; font-size:13px; font-weight:700; color:var(--text-primary); margin-bottom:8px; }
+  .tier-purpose { font-size:13px; color:var(--text-secondary); line-height:1.6; margin-bottom:14px; }
+  .tier-label { font-family:'Space Mono',monospace; font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:var(--text-muted); margin-bottom:4px; }
+  .tier-val { font-size:12px; color:var(--text-secondary); line-height:1.5; margin-bottom:10px; }
+  .gov-sub { margin-bottom:48px; }
+  .gov-sub-header { display:flex; align-items:center; gap:16px; margin-bottom:24px; }
+  .gov-sub-title { font-family:'Space Mono',monospace; font-size:12px; letter-spacing:3px; text-transform:uppercase; color:var(--accent); white-space:nowrap; }
+  .gov-sub-line { height:1px; flex:1; background:linear-gradient(90deg,var(--border-accent),transparent); }
+  .principle-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .principle-card { background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:24px; transition:all 0.3s; }
+  .principle-card:hover { border-color:var(--border-accent); box-shadow:0 4px 20px rgba(13,217,181,0.06); }
+  .p-icon { font-size:22px; margin-bottom:12px; display:block; }
+  .p-title { font-family:'Space Mono',monospace; font-size:13px; font-weight:700; color:var(--text-primary); margin-bottom:8px; }
+  .p-desc { font-size:13px; color:var(--text-secondary); line-height:1.6; }
+  .golden-rules { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .golden-rule { background:rgba(13,217,181,0.04); border:1px solid rgba(13,217,181,0.15); border-radius:10px; padding:24px; }
+  .gr-num { font-family:'Space Mono',monospace; font-size:32px; font-weight:700; color:rgba(13,217,181,0.2); line-height:1; margin-bottom:10px; }
+  .gr-text { font-family:'Space Mono',monospace; font-size:13px; font-weight:700; color:var(--accent); line-height:1.5; }
+
   /* === RESPONSIVE === */
   @media (max-width: 768px) {
     .hero { padding: 80px 20px 60px; }
@@ -518,12 +562,12 @@
 <section class="hero">
   <div class="hero-label">Senior BA / PM · AI Automation</div>
   <h1>I build systems where <span class="accent">AI agents</span> replace manual workflows.</h1>
-  <p class="hero-tagline">Senior BA and Project Manager who loves the 30,000-foot view but can't resist dropping into the tech to understand what's actually possible. I design automation systems — conversational agents, orchestration platforms, AI-generated artifacts — because the best digital transformation decisions come from people who speak both business and engineering fluently.</p>
+  <p class="hero-tagline">Senior BA and Project Manager who loves the 30,000-foot view but can't resist dropping into the tech to understand what's actually possible. I design automation systems - conversational agents, orchestration platforms, AI-generated artifacts - because the best digital transformation decisions come from people who speak both business and engineering fluently.</p>
   <p class="hero-tagline" style="color: var(--text-muted); font-size: 14px; margin-top: -20px;">Here's what the last 3 months have looked like.</p>
   <div class="hero-meta">
-    <div class="hero-meta-item">Role <span>— Senior BA / PM, DTI</span></div>
-    <div class="hero-meta-item">Org <span>— ACRRM / Vectorise Labs / Various Start-ups</span></div>
-    <div class="hero-meta-item">Base <span>— Brisbane, AU</span></div>
+    <div class="hero-meta-item">Role <span> -  Senior BA / PM, DTI</span></div>
+    <div class="hero-meta-item">Org <span> -  ACRRM / Vectorise Labs / Various Start-ups</span></div>
+    <div class="hero-meta-item">Base <span> -  Brisbane, AU</span></div>
   </div>
 </section>
 
@@ -538,7 +582,17 @@
 
 <!-- VIEW: PROJECTS -->
 <div id="view-projects" class="view-panel">
-<!-- PROJECTS -->
+
+    <div class="view-tabs">
+      <div class="view-tab-track">
+        <div class="tab-slider" id="tabSlider"></div>
+        <button class="view-tab active" onclick="switchView('projects')" id="tab-projects">Projects</button>
+        <button class="view-tab" onclick="switchView('governance')" id="tab-governance">Governance</button>
+      </div>
+    </div>
+
+    <div id="view-projects" class="view-panel active">
+    <!-- PROJECTS -->
 <section class="section">
   <div class="section-header">
     <span class="section-title">Projects</span>
@@ -553,11 +607,11 @@
         <div class="card-number">01</div>
         <div class="card-content">
           <div class="card-top-row">
-            <div class="card-title">Agentic OS — Model-Agnostic Automation Control Plane</div>
+            <div class="card-title">Agentic OS - Model-Agnostic Automation Control Plane</div>
             <span class="card-status status-design">Design &amp; MVP</span>
           </div>
           <div class="card-meta">Product Lead / Architect · <span>ACRRM / Vectorise Labs</span></div>
-          <p class="card-description">Leading the design of a model-agnostic orchestration platform that enables organisations to automate complex workflows using interchangeable AI agents. The platform acts as a control plane for enterprise automation — dynamically composing reusable agents, selecting models based on context and cost, and governing execution through human-in-the-loop oversight.</p>
+          <p class="card-description">Leading the design of a model-agnostic orchestration platform that enables organisations to automate complex workflows using interchangeable AI agents. The platform acts as a control plane for enterprise automation - dynamically composing reusable agents, selecting models based on context and cost, and governing execution through human-in-the-loop oversight.</p>
           <div class="card-tags">
             <span class="tag">n8n</span>
             <span class="tag">Claude API</span>
@@ -582,12 +636,12 @@
           <div class="detail-section">
             <div class="detail-label">Key Components</div>
             <ul class="detail-text">
-              <li><strong>Agent Warehouse</strong> — Catalogue of reusable, versioned agents for cross-enterprise deployment</li>
-              <li><strong>Model Router</strong> — Dynamic model selection based on capability, latency and token cost</li>
-              <li><strong>Capability Declaration Interface</strong> — Agents declare required tools, APIs and permissions before execution</li>
-              <li><strong>Meta-Agent Lifecycle</strong> — Specialised agents monitor performance, suggest upgrades, improve automation continuously</li>
-              <li><strong>Security &amp; Ethics Oversight</strong> — Governance agents that research patches, validate policies, enforce safe automation</li>
-              <li><strong>n8n Automation Fabric</strong> — Integration layer for scalable workflow execution and API orchestration</li>
+              <li><strong>Agent Warehouse</strong> - Catalogue of reusable, versioned agents for cross-enterprise deployment</li>
+              <li><strong>Model Router</strong> - Dynamic model selection based on capability, latency and token cost</li>
+              <li><strong>Capability Declaration Interface</strong> - Agents declare required tools, APIs and permissions before execution</li>
+              <li><strong>Meta-Agent Lifecycle</strong> - Specialised agents monitor performance, suggest upgrades, improve automation continuously</li>
+              <li><strong>Security &amp; Ethics Oversight</strong> - Governance agents that research patches, validate policies, enforce safe automation</li>
+              <li><strong>n8n Automation Fabric</strong> - Integration layer for scalable workflow execution and API orchestration</li>
             </ul>
           </div>
           <div class="detail-section">
@@ -608,11 +662,11 @@
         <div class="card-number">02</div>
         <div class="card-content">
           <div class="card-top-row">
-            <div class="card-title">ClickUp PMO Workflow — AI-Driven Intake to Delivery</div>
+            <div class="card-title">ClickUp PMO Workflow - AI-Driven Intake to Delivery</div>
             <span class="card-status status-partial">Design &amp; Pilot</span>
           </div>
-          <div class="card-meta">Architect / Builder · <span>ACRRM — Digital Technology &amp; Innovation</span></div>
-          <p class="card-description">Designed a full PMO delivery framework that takes requests from a single AI intake point, auto-classifies them by complexity, and routes them through governance-tiered delivery paths — each with AI-generated BA and PM artifacts. BAU goes straight through. Config Items get light governance. Projects get the full treatment.</p>
+          <div class="card-meta">Architect / Builder · <span>ACRRM - Digital Technology &amp; Innovation</span></div>
+          <p class="card-description">Designed a full PMO delivery framework that takes requests from a single AI intake point, auto-classifies them by complexity, and routes them through governance-tiered delivery paths - each with AI-generated BA and PM artifacts. BAU goes straight through. Config Items get light governance. Projects get the full treatment.</p>
           <div class="card-tags">
             <span class="tag">ClickUp</span>
             <span class="tag">n8n Cloud</span>
@@ -627,7 +681,7 @@
         <div class="card-detail-inner">
           <div class="detail-section">
             <div class="detail-label">Problem</div>
-            <p class="detail-text">Traditional PMO workflows treat every request the same — either everything gets full project governance (slow and expensive) or nothing does (chaotic and untracked). There's no intelligent middle ground. Teams waste time producing artifacts for work that doesn't need them, while complex projects skip governance because the overhead feels disproportionate.</p>
+            <p class="detail-text">Traditional PMO workflows treat every request the same - either everything gets full project governance (slow and expensive) or nothing does (chaotic and untracked). There's no intelligent middle ground. Teams waste time producing artifacts for work that doesn't need them, while complex projects skip governance because the overhead feels disproportionate.</p>
           </div>
           <div class="detail-section">
             <div class="detail-label">Delivery Framework</div>
@@ -636,14 +690,14 @@
           <div class="detail-section">
             <div class="detail-label">Three Delivery Tiers</div>
             <ul class="detail-text">
-              <li><strong>BAU Flow</strong> — Straight-through processing. Auto-assign, develop, quick test, deploy, auto-close. SLA: 24–48hrs. No artifacts, no overhead.</li>
-              <li><strong>CI Flow</strong> — Light governance. AI generates Requirements Doc, User Stories, Acceptance Criteria, Impact Analysis. BA reviews and approves. Sprint cycles with auto-updated PMO reporting. 1–2 sprints.</li>
-              <li><strong>Project Flow</strong> — Full governance. AI generates both BA artifacts (Requirements, User Stories, Process Flows, Acceptance Criteria) and PM artifacts (Project Charter, Plan, RACI Matrix, Risk Register). Human review gates. UAT, go-live, AI-generated lessons learned.</li>
+              <li><strong>BAU Flow</strong> - Straight-through processing. Auto-assign, develop, quick test, deploy, auto-close. SLA: 24-48hrs. No artifacts, no overhead.</li>
+              <li><strong>CI Flow</strong> - Light governance. AI generates Requirements Doc, User Stories, Acceptance Criteria, Impact Analysis. BA reviews and approves. Sprint cycles with auto-updated PMO reporting. 1-2 sprints.</li>
+              <li><strong>Project Flow</strong> - Full governance. AI generates both BA artifacts (Requirements, User Stories, Process Flows, Acceptance Criteria) and PM artifacts (Project Charter, Plan, RACI Matrix, Risk Register). Human review gates. UAT, go-live, AI-generated lessons learned.</li>
             </ul>
           </div>
           <div class="detail-section">
             <div class="detail-label">Key Innovation</div>
-            <p class="detail-text">AI agents draft the artifacts, humans review and approve them. This inverts the traditional model where humans write everything from scratch. The BA and PM still own quality and decisions — but they start from a structured draft instead of a blank page. Automated PMO dashboards track velocity, milestones, budget, and risk without manual status updates.</p>
+            <p class="detail-text">AI agents draft the artifacts, humans review and approve them. This inverts the traditional model where humans write everything from scratch. The BA and PM still own quality and decisions - but they start from a structured draft instead of a blank page. Automated PMO dashboards track velocity, milestones, budget, and risk without manual status updates.</p>
           </div>
         </div>
       </div>
@@ -658,8 +712,8 @@
             <div class="card-title">DTI Request Intake System</div>
             <span class="card-status status-prototype">Prototype</span>
           </div>
-          <div class="card-meta">Builder / Architect · <span>ACRRM — Digital Technology &amp; Innovation</span></div>
-          <p class="card-description">End-to-end AI-powered intake system replacing ad-hoc emails with structured, conversational intake. Staff describe what they need, the AI classifies and collects the right information, and a properly categorised task lands in ClickUp — no manual data entry required.</p>
+          <div class="card-meta">Builder / Architect · <span>ACRRM - Digital Technology &amp; Innovation</span></div>
+          <p class="card-description">End-to-end AI-powered intake system replacing ad-hoc emails with structured, conversational intake. Staff describe what they need, the AI classifies and collects the right information, and a properly categorised task lands in ClickUp - no manual data entry required.</p>
           <div class="card-tags">
             <span class="tag">Claude API</span>
             <span class="tag">n8n Cloud</span>
@@ -680,7 +734,7 @@
             <div class="detail-label">What I Built</div>
             <ul class="detail-text">
               <li>Custom React chat frontend with inline card selection for request type (BAU / Config Item / Project / Not Sure)</li>
-              <li>File upload — images and PDFs via base64 to Claude's vision API for document analysis</li>
+              <li>File upload - images and PDFs via base64 to Claude's vision API for document analysis</li>
               <li>n8n Cloud workflow: Chat Trigger → AI Agent (Claude Sonnet) → HTTP Request to ClickUp API</li>
               <li>System prompt engineering: agent asks one question at a time, analyses uploaded documents to pre-fill requirements</li>
               <li>Dual-mode architecture: direct Claude API for demo/testing, n8n webhook relay for production</li>
@@ -701,10 +755,10 @@
         <div class="card-number">04</div>
         <div class="card-content">
           <div class="card-top-row">
-            <div class="card-title">BA Workshop Agent — Real-Time Requirements Intelligence</div>
+            <div class="card-title">BA Workshop Agent - Real-Time Requirements Intelligence</div>
             <span class="card-status status-built">Built</span>
           </div>
-          <div class="card-meta">Builder / Architect · <span>ACRRM — Digital Technology &amp; Innovation</span></div>
+          <div class="card-meta">Builder / Architect · <span>ACRRM - Digital Technology &amp; Innovation</span></div>
           <p class="card-description">An AI agent that joins BA workshops via Microsoft Teams, listens to discussions in real-time, identifies requirement gaps and missing questions, and asks clarifying questions in the meeting chat while the conversation is still happening. Post-meeting, it automatically documents everything to ClickUp.</p>
           <div class="card-tags">
             <span class="tag">Recall.ai</span>
@@ -726,8 +780,8 @@
           <div class="detail-section">
             <div class="detail-label">Dual-Path Processing</div>
             <ul class="detail-text">
-              <li><strong>Path 1 — Real-Time Analysis:</strong> Buffers transcript chunks, throttles analysis frequency, Claude reviews against BA best practices, posts gap questions directly into the meeting chat so attendees can address them immediately</li>
-              <li><strong>Path 2 — Final Documentation:</strong> On meeting end, compiles all requirements, Claude generates comprehensive summary with acceptance criteria, creates ClickUp parent task with subtasks per requirement</li>
+              <li><strong>Path 1 - Real-Time Analysis:</strong> Buffers transcript chunks, throttles analysis frequency, Claude reviews against BA best practices, posts gap questions directly into the meeting chat so attendees can address them immediately</li>
+              <li><strong>Path 2 - Final Documentation:</strong> On meeting end, compiles all requirements, Claude generates comprehensive summary with acceptance criteria, creates ClickUp parent task with subtasks per requirement</li>
             </ul>
           </div>
           <div class="detail-section">
@@ -748,10 +802,10 @@
         <div class="card-number">05</div>
         <div class="card-content">
           <div class="card-top-row">
-            <div class="card-title">UAT Issue Reporter — Copilot Studio Agent</div>
+            <div class="card-title">UAT Issue Reporter - Copilot Studio Agent</div>
             <span class="card-status status-deployed">Deployed</span>
           </div>
-          <div class="card-meta">Builder / Architect · <span>ACRRM — Digital Technology &amp; Innovation</span></div>
+          <div class="card-meta">Builder / Architect · <span>ACRRM - Digital Technology &amp; Innovation</span></div>
           <p class="card-description">Conversational defect reporting agent in Microsoft Copilot Studio. Testers say "found a bug" and the agent walks them through structured fields, confirms details, and writes directly to a SharePoint backlog. Replaces unstructured emails and Teams messages with consistent, actionable reports.</p>
           <div class="card-tags">
             <span class="tag">Copilot Studio</span>
@@ -767,7 +821,7 @@
           <div class="detail-section">
             <div class="detail-label">How It Works</div>
             <ul class="detail-text">
-              <li>Triggers on natural language — "report issue", "found a bug", "log issue"</li>
+              <li>Triggers on natural language - "report issue", "found a bug", "log issue"</li>
               <li>Collects five fields sequentially: Issue Title, Severity, Module, Description (steps to reproduce), Requester</li>
               <li>Presents formatted summary with labelled, bolded details</li>
               <li>"Submit or Cancel?" via multiple choice buttons</li>
@@ -816,7 +870,7 @@
           </div>
           <div class="detail-section">
             <div class="detail-label">Why It Matters</div>
-            <p class="detail-text">This is meta-automation — using AI to build and manage AI automation. The skill files act as reusable context that persists across sessions. The MCP connections turn Claude from an advisor into an operator that can directly execute against live systems.</p>
+            <p class="detail-text">This is meta-automation - using AI to build and manage AI automation. The skill files act as reusable context that persists across sessions. The MCP connections turn Claude from an advisor into an operator that can directly execute against live systems.</p>
           </div>
         </div>
       </div>
@@ -829,11 +883,11 @@
         <div class="card-number">07</div>
         <div class="card-content">
           <div class="card-top-row">
-            <div class="card-title">Open Brain — Cross-Tool AI Memory System</div>
+            <div class="card-title">Open Brain - Cross-Tool AI Memory System</div>
             <span class="card-status status-active">Active</span>
           </div>
           <div class="card-meta">Builder / Architect · <span>Personal / ACRRM</span></div>
-          <p class="card-description">A shared knowledge system that gives every AI tool persistent memory. Built on pgvector embeddings and MCP, Open Brain lets Claude, Gemini, and other AI assistants share context, remember decisions, and pick up where any tool left off — eliminating the “cold start” problem of AI conversations.</p>
+          <p class="card-description">A shared knowledge system that gives every AI tool persistent memory. Built on pgvector embeddings and MCP, Open Brain lets Claude, Gemini, and other AI assistants share context, remember decisions, and pick up where any tool left off - eliminating the “cold start” problem of AI conversations.</p>
           <div class="card-tags">
             <span class="tag">MCP</span>
             <span class="tag">n8n Cloud</span>
@@ -858,16 +912,16 @@
           <div class="detail-section">
             <div class="detail-label">Key Components</div>
             <ul class="detail-text">
-              <li><strong>Vector Knowledge Base</strong> — Neon PostgreSQL with pgvector extension. Every piece of saved knowledge gets embedded (OpenAI text-embedding-3-small, 1536 dimensions) for semantic search</li>
-              <li><strong>MCP Server</strong> — Custom Node.js server exposing tools: search_knowledge, save_memory, log_conversation, get_user_context, get_project_context. Supports stdio (local) and SSE (remote) transport</li>
-              <li><strong>n8n Orchestration</strong> — Two core workflows: Document Ingestion (chunk → embed → store) and Semantic Search (embed query → vector similarity → return ranked results)</li>
-              <li><strong>Railway Deployment</strong> — SSE server deployed for remote AI tool access. Claude Desktop uses stdio for low-latency local connection</li>
-              <li><strong>Cross-Tool Memory</strong> — Conversation logs, project decisions, technical patterns, and domain knowledge persist across all connected AI tools</li>
+              <li><strong>Vector Knowledge Base</strong> - Neon PostgreSQL with pgvector extension. Every piece of saved knowledge gets embedded (OpenAI text-embedding-3-small, 1536 dimensions) for semantic search</li>
+              <li><strong>MCP Server</strong> - Custom Node.js server exposing tools: search_knowledge, save_memory, log_conversation, get_user_context, get_project_context. Supports stdio (local) and SSE (remote) transport</li>
+              <li><strong>n8n Orchestration</strong> - Two core workflows: Document Ingestion (chunk → embed → store) and Semantic Search (embed query → vector similarity → return ranked results)</li>
+              <li><strong>Railway Deployment</strong> - SSE server deployed for remote AI tool access. Claude Desktop uses stdio for low-latency local connection</li>
+              <li><strong>Cross-Tool Memory</strong> - Conversation logs, project decisions, technical patterns, and domain knowledge persist across all connected AI tools</li>
             </ul>
           </div>
           <div class="detail-section">
             <div class="detail-label">Outcome</div>
-            <p class="detail-text">Claude now has persistent project context across sessions — it knows the tech stack, past decisions, architectural patterns, and current status without re-explanation. The same knowledge base is accessible from any MCP-compatible AI tool. Currently the primary knowledge store for all automation project context at ACRRM.</p>
+            <p class="detail-text">Claude now has persistent project context across sessions - it knows the tech stack, past decisions, architectural patterns, and current status without re-explanation. The same knowledge base is accessible from any MCP-compatible AI tool. Currently the primary knowledge store for all automation project context at ACRRM.</p>
           </div>
         </div>
       </div>
@@ -883,7 +937,7 @@
             <span class="card-status status-prototype">Testing</span>
           </div>
           <div class="card-meta">Developer / Quantitative Strategist · <span>Personal</span></div>
-          <p class="card-description">Multi-version algorithmic trading strategy — MarketRegimeWhalePredator — that goes long in bull markets and short in bear markets, using regime detection, adaptive risk management, and anti-martingale position sizing. Currently paper trading at +5% YTD.</p>
+          <p class="card-description">Multi-version algorithmic trading strategy - MarketRegimeWhalePredator - that goes long in bull markets and short in bear markets, using regime detection, adaptive risk management, and anti-martingale position sizing. Currently paper trading at +5% YTD.</p>
           <div class="card-tags">
             <span class="tag">Python</span>
             <span class="tag">QuantConnect</span>
@@ -898,15 +952,15 @@
           <div class="detail-section">
             <div class="detail-label">Strategy Features</div>
             <ul class="detail-text">
-              <li><strong>Regime Detection</strong> — EMA crossover, SPY 200-day trend, VIX-based market state classification</li>
-              <li><strong>Risk Management</strong> — ATR trailing stops with adaptive multipliers, VIX circuit breakers, breakeven activation</li>
-              <li><strong>Advanced</strong> — Composite regime scoring (VIX + MOVE + HYG + yield curve), volatility targeting at 1.5% daily, correlation guards</li>
-              <li><strong>Position Sizing</strong> — Dynamic allocation based on regime, trend strength, and volatility</li>
+              <li><strong>Regime Detection</strong> - EMA crossover, SPY 200-day trend, VIX-based market state classification</li>
+              <li><strong>Risk Management</strong> - ATR trailing stops with adaptive multipliers, VIX circuit breakers, breakeven activation</li>
+              <li><strong>Advanced</strong> - Composite regime scoring (VIX + MOVE + HYG + yield curve), volatility targeting at 1.5% daily, correlation guards</li>
+              <li><strong>Position Sizing</strong> - Dynamic allocation based on regime, trend strength, and volatility</li>
             </ul>
           </div>
           <div class="detail-section">
             <div class="detail-label">Approach</div>
-            <p class="detail-text">Multi-AI development workflow: Claude for implementation and code generation, GPT for quantitative analysis and strategy critique. Iterative refinement across V1–V5, focused on reducing max drawdown during stressed periods (GFC, COVID, 2022 bear) without sacrificing CAGR in bull runs. Now paper trading via Interactive Brokers — up 5% YTD.</p>
+            <p class="detail-text">Multi-AI development workflow: Claude for implementation and code generation, GPT for quantitative analysis and strategy critique. Iterative refinement across V1-V5, focused on reducing max drawdown during stressed periods (GFC, COVID, 2022 bear) without sacrificing CAGR in bull runs. Now paper trading via Interactive Brokers - up 5% YTD.</p>
           </div>
         </div>
       </div>
@@ -922,7 +976,7 @@
             <span class="card-status status-active">Active</span>
           </div>
           <div class="card-meta">Collector / AI Experimenter · <span>Personal</span></div>
-          <p class="card-description">Used Claude's vision capabilities to identify, catalogue, and price over 1,000 Pokémon cards from batch photo uploads. Turned shoeboxes of cards into a structured, priced Excel inventory — without manually looking up a single card.</p>
+          <p class="card-description">Used Claude's vision capabilities to identify, catalogue, and price over 1,000 Pokémon cards from batch photo uploads. Turned shoeboxes of cards into a structured, priced Excel inventory - without manually looking up a single card.</p>
           <div class="card-tags">
             <span class="tag">Claude Vision</span>
             <span class="tag">Image Recognition</span>
@@ -936,14 +990,14 @@
         <div class="card-detail-inner">
           <div class="detail-section">
             <div class="detail-label">How It Worked</div>
-            <p class="detail-text">Batches of 10–20 card photos sent to Claude, which identified each by name, set number, series, and estimated raw Near-Mint market value in AUD. Over 1,000 cards processed across multiple sessions. Output structured as table rows, compiled into formatted Excel spreadsheets with batch tracking. Handled cards across Base Set through Scarlet &amp; Violet eras, including Japanese cards, promos, and secret rares.</p>
+            <p class="detail-text">Batches of 10-20 card photos sent to Claude, which identified each by name, set number, series, and estimated raw Near-Mint market value in AUD. Over 1,000 cards processed across multiple sessions. Output structured as table rows, compiled into formatted Excel spreadsheets with batch tracking. Handled cards across Base Set through Scarlet &amp; Violet eras, including Japanese cards, promos, and secret rares.</p>
           </div>
           <div class="detail-section">
             <div class="detail-label">Notable Finds</div>
             <ul class="detail-text">
-              <li>Tropical Beach BW50 — $400–600+ AUD</li>
-              <li>Base Set Charizard 4/102 — $150–300+ AUD</li>
-              <li>Mew 8/110 Legendary Collection — $50–100 AUD</li>
+              <li>Tropical Beach BW50 - $400-600+ AUD</li>
+              <li>Base Set Charizard 4/102 - $150-300+ AUD</li>
+              <li>Mew 8/110 Legendary Collection - $50-100 AUD</li>
             </ul>
           </div>
           <div class="detail-section">
@@ -967,7 +1021,7 @@
     <div class="section-line"></div>
   </div>
 
-  <p class="gov-intro">I believe the core challenge in enterprise AI is managing the tension between <strong>speed and control</strong>. Engineers want to move fast, risk teams need assurance, and both are right. The answer is building a structure where <strong>governance scales with risk</strong> — not a blanket process that treats every experiment the same.</p>
+  <p class="gov-intro">I believe the core challenge in enterprise AI is managing the tension between <strong>speed and control</strong>. Engineers want to move fast, risk teams need assurance, and both are right. The answer is building a structure where <strong>governance scales with risk</strong> - not a blanket process that treats every experiment the same.</p>
 
   <div class="gov-sub">
     <div class="gov-sub-header"><span class="gov-sub-title">Tiered Experimentation</span><div class="gov-sub-line"></div></div>
@@ -986,9 +1040,9 @@
       <div class="principle-card"><span class="p-icon">🛡️</span><div class="p-title">Human-in-the-Loop</div><div class="p-desc">AI drafts, humans decide. No experiment graduates between tiers without the right eyes on it. Review gates are co-designed with risk and legal teams.</div></div>
       <div class="principle-card"><span class="p-icon">🔍</span><div class="p-title">Transparent by Default</div><div class="p-desc">Every experiment gets a data classification, role-based access controls, and automatic audit trails. Decision logic and confidence signals are visible.</div></div>
       <div class="principle-card"><span class="p-icon">🔒</span><div class="p-title">Governance at the Gate</div><div class="p-desc">Security reviews happen at defined gates between tiers, not as ad-hoc requests. Light-touch at Explore, progressively tighter toward production.</div></div>
-      <div class="principle-card"><span class="p-icon">📊</span><div class="p-title">If It’s Not Tracked, It Didn’t Happen</div><div class="p-desc">Real-time dashboards, budget caps per tier, chargeback models. The key metric: conversion rate through the funnel — Explore to Validate to Production.</div></div>
+      <div class="principle-card"><span class="p-icon">📊</span><div class="p-title">If It’s Not Tracked, It Didn’t Happen</div><div class="p-desc">Real-time dashboards, budget caps per tier, chargeback models. The key metric: conversion rate through the funnel - Explore to Validate to Production.</div></div>
       <div class="principle-card"><span class="p-icon">👥</span><div class="p-title">People, Not Resources</div><div class="p-desc">For every production experiment, measure the impact on roles transparently. Frame outcomes around productivity, not replacement. Partner with HR early on upskilling.</div></div>
-      <div class="principle-card"><span class="p-icon">🔄</span><div class="p-title">Model Agnostic</div><div class="p-desc">Back the field, not the horse. No vendor lock-in. Swap models by capability, cost, and compliance — not habit.</div></div>
+      <div class="principle-card"><span class="p-icon">🔄</span><div class="p-title">Model Agnostic</div><div class="p-desc">Back the field, not the horse. No vendor lock-in. Swap models by capability, cost, and compliance - not habit.</div></div>
     </div>
   </div>
 
@@ -1004,7 +1058,118 @@
 </section>
 </div>
 
-<!-- FOOTER -->
+
+    </div><!-- /view-projects -->
+
+    <div id="view-governance" class="view-panel">
+      <section class="governance-section">
+        <div class="section-header">
+          <h2>AI Governance Framework</h2>
+          <p>A tiered experimentation model that balances speed with safety. Gates are co-designed with risk and legal teams, embedded into workflows rather than bolted on after the fact.</p>
+        </div>
+
+        <div class="tier-grid">
+          <div class="tier-card">
+            <div class="tier-badge tier-explore">Explore</div>
+            <div class="tier-title">Sandbox Experimentation</div>
+            <p class="tier-desc">Rapid prototyping with synthetic or dummy data. Minimal governance overhead. Teams can spin up experiments freely to test feasibility before committing resources.</p>
+            <div class="tier-details">
+              <span class="tag">Synthetic Data Only</span>
+              <span class="tag">No Approval Gate</span>
+              <span class="tag">Time-boxed</span>
+            </div>
+          </div>
+
+          <div class="tier-card">
+            <div class="tier-badge tier-validate">Validate</div>
+            <div class="tier-title">Business Case &amp; Controlled Testing</div>
+            <p class="tier-desc">Requires a documented business case and stakeholder sign-off. Uses anonymised production data. This is the handover point where the initiative gets a formal owner and budget allocation.</p>
+            <div class="tier-details">
+              <span class="tag">Anonymised Data</span>
+              <span class="tag">Business Case Required</span>
+              <span class="tag">Stakeholder Sign-off</span>
+            </div>
+          </div>
+
+          <div class="tier-card">
+            <div class="tier-badge tier-preprod">Pre-prod</div>
+            <div class="tier-title">Full Governance &amp; Production Readiness</div>
+            <p class="tier-desc">Complete governance review including risk assessment, compliance checks, and security audit. Production data access granted. Human-in-the-loop validation at every decision gate.</p>
+            <div class="tier-details">
+              <span class="tag">Production Data</span>
+              <span class="tag">Risk &amp; Compliance Review</span>
+              <span class="tag">HITL Mandatory</span>
+            </div>
+          </div>
+
+          <div class="tier-card">
+            <div class="tier-badge tier-parked">Parked</div>
+            <div class="tier-title">Preserved with Reactivation Triggers</div>
+            <p class="tier-desc">Initiatives that showed promise but lack current resourcing or timing. Fully documented with clear reactivation criteria so nothing valuable gets lost.</p>
+            <div class="tier-details">
+              <span class="tag">Documented Learnings</span>
+              <span class="tag">Reactivation Criteria</span>
+              <span class="tag">Preserved Assets</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-header" style="margin-top: 3rem;">
+          <h2>Operating Principles</h2>
+        </div>
+
+        <div class="principles-grid">
+          <div class="principle-card">
+            <div class="principle-icon">01</div>
+            <h3>Intake Funnel</h3>
+            <p>Every AI initiative enters through a single intake process. No shadow projects. Requests are triaged, scoped, and assigned a tier within 48 hours.</p>
+          </div>
+          <div class="principle-card">
+            <div class="principle-icon">02</div>
+            <h3>2-Week Sprints</h3>
+            <p>All active work runs in agile two-week cycles with demos and retrospectives. Budget caps are enforced per tier to prevent scope creep.</p>
+          </div>
+          <div class="principle-card">
+            <div class="principle-icon">03</div>
+            <h3>Chargeback Model</h3>
+            <p>Costs are attributed to requesting business units. This creates natural prioritisation pressure and ensures only high-value work progresses past Explore.</p>
+          </div>
+          <div class="principle-card">
+            <div class="principle-icon">04</div>
+            <h3>Model Agnostic</h3>
+            <p>Back the field, not the horse. No vendor lock-in. Solutions are designed to swap underlying models as the landscape evolves.</p>
+          </div>
+        </div>
+
+        <div class="golden-rules">
+          <h3>The Golden Rules</h3>
+          <div class="golden-rule">
+            <span class="golden-rule-number">I</span>
+            <div>
+              <strong>People, not resources.</strong>
+              <p>Every person on the team is a professional with a career arc. Invest in them accordingly.</p>
+            </div>
+          </div>
+          <div class="golden-rule">
+            <span class="golden-rule-number">II</span>
+            <div>
+              <strong>If it's not tracked, it didn't happen.</strong>
+              <p>Every experiment, decision, and outcome is documented. Institutional memory is a competitive advantage.</p>
+            </div>
+          </div>
+          <div class="golden-rule">
+            <span class="golden-rule-number">III</span>
+            <div>
+              <strong>Model agnostic. Back the field, not the horse.</strong>
+              <p>The AI landscape shifts fast. Architect for flexibility, not for any single provider.</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div><!-- /view-governance -->
+
+    <!-- FOOTER -->
 <footer class="footer">
   <p class="footer-text">Built by Temba · <span class="accent">2026</span> · Powered by too much coffee and Claude</p>
 </footer>
@@ -1067,7 +1232,41 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeLightbox();
 });
-</script>
+
+    function switchView(view) {
+      const projectsPanel = document.getElementById('view-projects');
+      const governancePanel = document.getElementById('view-governance');
+      const tabProjects = document.getElementById('tab-projects');
+      const tabGovernance = document.getElementById('tab-governance');
+      const slider = document.getElementById('tabSlider');
+
+      if (view === 'projects') {
+        projectsPanel.classList.add('active');
+        governancePanel.classList.remove('active');
+        tabProjects.classList.add('active');
+        tabGovernance.classList.remove('active');
+        slider.style.transform = 'translateX(0)';
+      } else {
+        projectsPanel.classList.remove('active');
+        governancePanel.classList.add('active');
+        tabProjects.classList.remove('active');
+        tabGovernance.classList.add('active');
+        slider.style.transform = 'translateX(100%)';
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const slider = document.getElementById('tabSlider');
+      if (slider) {
+        const firstTab = document.getElementById('tab-projects');
+        if (firstTab) {
+          slider.style.width = firstTab.offsetWidth + 'px';
+        }
+      }
+    });
+
+  </script>
 
 </body>
 </html>
