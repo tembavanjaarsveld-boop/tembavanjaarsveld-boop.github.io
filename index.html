@@ -960,7 +960,7 @@
 
     </div><!-- /view-projects -->
 
-    <div id="view-governance" class="view-panel">
+    <div id="view-governance" class="view-panel hidden">
       <section class="gov-section">
         <div class="gov-intro">
           <h2>AI Governance Framework</h2>
@@ -1066,24 +1066,24 @@ function closeLightbox() {
 
 
     function switchView(view) {
-      const projectsPanel = document.getElementById('view-projects');
-      const governancePanel = document.getElementById('view-governance');
-      const tabProjects = document.getElementById('tab-projects');
-      const tabGovernance = document.getElementById('tab-governance');
-      const slider = document.getElementById('tabSlider');
+      var pp = document.getElementById('view-projects');
+      var gp = document.getElementById('view-governance');
+      var tp = document.getElementById('tab-projects');
+      var tg = document.getElementById('tab-governance');
+      var sl = document.getElementById('tabSlider');
 
       if (view === 'projects') {
-        projectsPanel.classList.add('active');
-        governancePanel.classList.remove('active');
-        tabProjects.classList.add('active');
-        tabGovernance.classList.remove('active');
-        slider.style.transform = 'translateX(0)';
+        pp.classList.remove('hidden');
+        gp.classList.add('hidden');
+        tp.classList.add('active');
+        tg.classList.remove('active');
+        sl.style.transform = 'translateX(0)';
       } else {
-        projectsPanel.classList.remove('active');
-        governancePanel.classList.add('active');
-        tabProjects.classList.remove('active');
-        tabGovernance.classList.add('active');
-        slider.style.transform = 'translateX(100%)';
+        pp.classList.add('hidden');
+        gp.classList.remove('hidden');
+        tp.classList.remove('active');
+        tg.classList.add('active');
+        sl.style.transform = 'translateX(100%)';
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
