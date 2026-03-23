@@ -444,6 +444,52 @@
   .project-card:nth-child(6) { animation-delay: 0.35s; }
   .project-card:nth-child(7) { animation-delay: 0.4s; }
   .project-card:nth-child(8) { animation-delay: 0.45s; }
+  .project-card:nth-child(9) { animation-delay: 0.5s; }
+
+
+  /* === TAB SLIDER === */
+  .view-tabs { position:relative; z-index:1; max-width:1100px; margin:0 auto; padding:0 40px 40px; display:flex; align-items:center; gap:0; opacity:0; animation:fadeUp 0.6s ease 0.4s forwards; }
+  .view-tab-track { display:flex; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:4px; position:relative; }
+  .view-tab { font-family:'Space Mono',monospace; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; padding:10px 28px; border:none; background:transparent; color:var(--text-muted); cursor:pointer; position:relative; z-index:2; transition:color 0.3s ease; white-space:nowrap; }
+  .view-tab:hover { color:var(--text-secondary); }
+  .view-tab.active { color:var(--accent); }
+  .tab-slider { position:absolute; top:4px; left:4px; height:calc(100% - 8px); background:rgba(13,217,181,0.08); border:1px solid rgba(13,217,181,0.2); border-radius:6px; transition:transform 0.35s cubic-bezier(0.4,0,0.2,1),width 0.35s cubic-bezier(0.4,0,0.2,1); z-index:1; }
+  .view-panel { transition:opacity 0.35s ease,transform 0.35s ease; }
+  .view-panel.hidden { display:none; }
+  .view-panel.slide-in { animation:slideIn 0.35s cubic-bezier(0.22,1,0.36,1) forwards; }
+  .view-panel.slide-in-rev { animation:slideInRev 0.35s cubic-bezier(0.22,1,0.36,1) forwards; }
+  @keyframes slideIn { from{opacity:0;transform:translateX(40px)} to{opacity:1;transform:translateX(0)} }
+  @keyframes slideInRev { from{opacity:0;transform:translateX(-40px)} to{opacity:1;transform:translateX(0)} }
+
+  /* === GOVERNANCE === */
+  .gov-section { position:relative; z-index:1; padding:0 40px 120px; max-width:1100px; margin:0 auto; }
+  .gov-intro { font-size:17px; color:var(--text-secondary); line-height:1.75; max-width:800px; margin-bottom:48px; }
+  .gov-intro strong { color:var(--text-primary); }
+  .tier-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:56px; }
+  .tier-card { background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:24px 20px; transition:all 0.3s ease; border-top:3px solid transparent; }
+  .tier-card:hover { border-color:var(--border-accent); box-shadow:0 4px 20px rgba(13,217,181,0.06); transform:translateY(-2px); }
+  .tier-card.t-explore { border-top-color:#0dd9b5; }
+  .tier-card.t-validate { border-top-color:#f7b731; }
+  .tier-card.t-preprod { border-top-color:#a55eea; }
+  .tier-card.t-parked { border-top-color:#555570; }
+  .tier-name { font-family:'Space Mono',monospace; font-size:13px; font-weight:700; color:var(--text-primary); margin-bottom:8px; }
+  .tier-purpose { font-size:13px; color:var(--text-secondary); line-height:1.6; margin-bottom:14px; }
+  .tier-label { font-family:'Space Mono',monospace; font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:var(--text-muted); margin-bottom:4px; }
+  .tier-val { font-size:12px; color:var(--text-secondary); line-height:1.5; margin-bottom:10px; }
+  .gov-sub { margin-bottom:48px; }
+  .gov-sub-header { display:flex; align-items:center; gap:16px; margin-bottom:24px; }
+  .gov-sub-title { font-family:'Space Mono',monospace; font-size:12px; letter-spacing:3px; text-transform:uppercase; color:var(--accent); white-space:nowrap; }
+  .gov-sub-line { height:1px; flex:1; background:linear-gradient(90deg,var(--border-accent),transparent); }
+  .principle-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .principle-card { background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:24px; transition:all 0.3s ease; }
+  .principle-card:hover { border-color:var(--border-accent); box-shadow:0 4px 20px rgba(13,217,181,0.06); }
+  .p-icon { font-size:22px; margin-bottom:12px; display:block; }
+  .p-title { font-family:'Space Mono',monospace; font-size:13px; font-weight:700; color:var(--text-primary); margin-bottom:8px; }
+  .p-desc { font-size:13px; color:var(--text-secondary); line-height:1.6; }
+  .golden-rules { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .golden-rule { background:rgba(13,217,181,0.04); border:1px solid rgba(13,217,181,0.15); border-radius:10px; padding:24px; }
+  .gr-num { font-family:'Space Mono',monospace; font-size:32px; font-weight:700; color:rgba(13,217,181,0.2); line-height:1; margin-bottom:10px; }
+  .gr-text { font-family:'Space Mono',monospace; font-size:13px; font-weight:700; color:var(--accent); line-height:1.5; }
 
   /* === RESPONSIVE === */
   @media (max-width: 768px) {
@@ -455,6 +501,12 @@
     .card-expand-hint { padding: 0 20px 16px; }
     .hero-meta { gap: 16px; }
     .card-top-row { flex-direction: column; }
+    .view-tabs { padding:0 20px 30px; }
+    .view-tab { padding:8px 16px; font-size:11px; letter-spacing:1px; }
+    .tier-grid { grid-template-columns:repeat(2,1fr); gap:12px; }
+    .principle-grid { grid-template-columns:1fr; }
+    .golden-rules { grid-template-columns:1fr; }
+    .gov-section { padding:0 20px 80px; }
   }
 </style>
 </head>
@@ -475,6 +527,17 @@
   </div>
 </section>
 
+<!-- TAB TOGGLE -->
+<div class="view-tabs">
+  <div class="view-tab-track">
+    <div class="tab-slider" id="tabSlider"></div>
+    <button class="view-tab active" onclick="switchView('projects')" id="tab-projects">Projects</button>
+    <button class="view-tab" onclick="switchView('governance')" id="tab-governance">Governance</button>
+  </div>
+</div>
+
+<!-- VIEW: PROJECTS -->
+<div id="view-projects" class="view-panel">
 <!-- PROJECTS -->
 <section class="section">
   <div class="section-header">
@@ -894,6 +957,53 @@
   </div>
 </section>
 
+</div>
+
+<!-- VIEW: GOVERNANCE -->
+<div id="view-governance" class="view-panel hidden">
+<section class="gov-section">
+  <div class="section-header">
+    <span class="section-title">AI Governance Framework</span>
+    <div class="section-line"></div>
+  </div>
+
+  <p class="gov-intro">I believe the core challenge in enterprise AI is managing the tension between <strong>speed and control</strong>. Engineers want to move fast, risk teams need assurance, and both are right. The answer is building a structure where <strong>governance scales with risk</strong> — not a blanket process that treats every experiment the same.</p>
+
+  <div class="gov-sub">
+    <div class="gov-sub-header"><span class="gov-sub-title">Tiered Experimentation</span><div class="gov-sub-line"></div></div>
+    <div class="tier-grid">
+      <div class="tier-card t-explore"><div class="tier-name">Explore</div><div class="tier-purpose">Open experimentation. Test new models, spike ideas, break things.</div><div class="tier-label">Governance</div><div class="tier-val">Minimal. Token budget caps. No formal sign-off.</div><div class="tier-label">Data Access</div><div class="tier-val">Synthetic and public data only.</div></div>
+      <div class="tier-card t-validate"><div class="tier-name">Validate</div><div class="tier-purpose">Structured experimentation tied to a business case. Time-boxed, outcomes tracked.</div><div class="tier-label">Governance</div><div class="tier-val">Business case required. Token spend tracked. Regular review.</div><div class="tier-label">Data Access</div><div class="tier-val">Anonymised datasets with data team approval.</div></div>
+      <div class="tier-card t-preprod"><div class="tier-name">Pre-prod</div><div class="tier-purpose">Production-mirror. Proves a validated experiment works under real conditions.</div><div class="tier-label">Governance</div><div class="tier-val">Full governance: security review, data audit, legal sign-off.</div><div class="tier-label">Data Access</div><div class="tier-val">Production-equivalent data with audit logging.</div></div>
+      <div class="tier-card t-parked"><div class="tier-name">Parked</div><div class="tier-purpose">Promising tech, wrong timing. Preserved with reactivation triggers.</div><div class="tier-label">Governance</div><div class="tier-val">Documented reason. Tagged triggers. Monthly review.</div><div class="tier-label">Data Access</div><div class="tier-val">No active access. Artefacts preserved.</div></div>
+    </div>
+    <p class="gov-intro" style="font-size:14px;color:var(--text-muted);margin-top:-32px;">The Parked tier is where most labs programs get it wrong. They treat “not yet” as “no” and good ideas quietly die. Tagging experiments with reactivation triggers turns the backlog into a strategic asset.</p>
+  </div>
+
+  <div class="gov-sub">
+    <div class="gov-sub-header"><span class="gov-sub-title">Core Principles</span><div class="gov-sub-line"></div></div>
+    <div class="principle-grid">
+      <div class="principle-card"><span class="p-icon">🛡️</span><div class="p-title">Human-in-the-Loop</div><div class="p-desc">AI drafts, humans decide. No experiment graduates between tiers without the right eyes on it. Review gates are co-designed with risk and legal teams.</div></div>
+      <div class="principle-card"><span class="p-icon">🔍</span><div class="p-title">Transparent by Default</div><div class="p-desc">Every experiment gets a data classification, role-based access controls, and automatic audit trails. Decision logic and confidence signals are visible.</div></div>
+      <div class="principle-card"><span class="p-icon">🔒</span><div class="p-title">Governance at the Gate</div><div class="p-desc">Security reviews happen at defined gates between tiers, not as ad-hoc requests. Light-touch at Explore, progressively tighter toward production.</div></div>
+      <div class="principle-card"><span class="p-icon">📊</span><div class="p-title">If It’s Not Tracked, It Didn’t Happen</div><div class="p-desc">Real-time dashboards, budget caps per tier, chargeback models. The key metric: conversion rate through the funnel — Explore to Validate to Production.</div></div>
+      <div class="principle-card"><span class="p-icon">👥</span><div class="p-title">People, Not Resources</div><div class="p-desc">For every production experiment, measure the impact on roles transparently. Frame outcomes around productivity, not replacement. Partner with HR early on upskilling.</div></div>
+      <div class="principle-card"><span class="p-icon">🔄</span><div class="p-title">Model Agnostic</div><div class="p-desc">Back the field, not the horse. No vendor lock-in. Swap models by capability, cost, and compliance — not habit.</div></div>
+    </div>
+  </div>
+
+  <div class="gov-sub">
+    <div class="gov-sub-header"><span class="gov-sub-title">Golden Rules</span><div class="gov-sub-line"></div></div>
+    <div class="golden-rules">
+      <div class="golden-rule"><div class="gr-num">01</div><div class="gr-text">People, not resources. Always productivity gains. Never headcount.</div></div>
+      <div class="golden-rule"><div class="gr-num">02</div><div class="gr-text">If it’s not tracked, it didn’t happen.</div></div>
+      <div class="golden-rule"><div class="gr-num">03</div><div class="gr-text">Model agnostic. Back the field, not the horse.</div></div>
+    </div>
+  </div>
+
+</section>
+</div>
+
 <!-- FOOTER -->
 <footer class="footer">
   <p class="footer-text">Built by Temba · <span class="accent">2026</span> · Powered by too much coffee and Claude</p>
@@ -917,6 +1027,42 @@ function openLightbox(src) {
 function closeLightbox() {
   document.getElementById('lightbox').classList.remove('active');
 }
+
+
+function switchView(view) {
+  var tabs = document.querySelectorAll('.view-tab');
+  var panels = document.querySelectorAll('.view-panel');
+  var slider = document.getElementById('tabSlider');
+  var projTab = document.getElementById('tab-projects');
+  var govTab = document.getElementById('tab-governance');
+  
+  tabs.forEach(function(t) { t.classList.remove('active'); });
+  
+  if (view === 'projects') {
+    projTab.classList.add('active');
+    slider.style.width = projTab.offsetWidth + 'px';
+    slider.style.transform = 'translateX(0)';
+    document.getElementById('view-projects').classList.remove('hidden');
+    document.getElementById('view-projects').className = 'view-panel slide-in-rev';
+    document.getElementById('view-governance').classList.add('hidden');
+  } else {
+    govTab.classList.add('active');
+    slider.style.width = govTab.offsetWidth + 'px';
+    slider.style.transform = 'translateX(' + projTab.offsetWidth + 'px)';
+    document.getElementById('view-governance').classList.remove('hidden');
+    document.getElementById('view-governance').className = 'view-panel slide-in';
+    document.getElementById('view-projects').classList.add('hidden');
+  }
+}
+
+// Init slider position on load
+document.addEventListener('DOMContentLoaded', function() {
+  var projTab = document.getElementById('tab-projects');
+  var slider = document.getElementById('tabSlider');
+  if (projTab && slider) {
+    slider.style.width = projTab.offsetWidth + 'px';
+  }
+});
 
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeLightbox();
