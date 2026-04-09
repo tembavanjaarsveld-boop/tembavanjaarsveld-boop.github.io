@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tembavanjaarsveld-boop.github.io/sitemap.xml
