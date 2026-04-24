@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Temba van Jaarsveld portfolio social preview</title>
+  <desc id="desc">Dark branded preview card for AI automation and agentic workflow portfolio.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.48" stop-color="#0f2d33"/>
+      <stop offset="1" stop-color="#172515"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="25%" r="60%">
+      <stop offset="0" stop-color="#b8ff6a" stop-opacity="0.42"/>
+      <stop offset="0.5" stop-color="#6fd6ff" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#07111f" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="990" cy="120" r="92" fill="#b8ff6a" opacity="0.16"/>
+  <circle cx="1040" cy="170" r="34" fill="#d7ff96" opacity="0.36"/>
+  <path d="M110 472C237 332 341 385 457 255c72-81 132-112 235-88 92 21 155-23 254-112" fill="none" stroke="#b8ff6a" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+  <path d="M111 505C253 407 349 452 468 331c72-73 149-95 252-58 103 38 165 9 278-79" fill="none" stroke="#75d7ff" stroke-width="4" stroke-linecap="round" opacity="0.62"/>
+  <text x="92" y="142" fill="#b8ff6a" font-family="Verdana, Geneva, sans-serif" font-size="28" letter-spacing="7">PORTFOLIO</text>
+  <text x="90" y="245" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="74" font-weight="700">Temba van</text>
+  <text x="90" y="332" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="74" font-weight="700">Jaarsveld</text>
+  <text x="94" y="405" fill="#dce8ec" font-family="Verdana, Geneva, sans-serif" font-size="32">AI automation, integration design</text>
+  <text x="94" y="452" fill="#dce8ec" font-family="Verdana, Geneva, sans-serif" font-size="32">and agentic healthcare workflows</text>
+  <rect x="90" y="516" width="330" height="54" rx="27" fill="#b8ff6a"/>
+  <text x="124" y="552" fill="#061118" font-family="Verdana, Geneva, sans-serif" font-size="24" font-weight="700">View proof of work</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="880" viewBox="0 0 1440 880" role="img" aria-labelledby="title desc">
+  <title id="title">PMO Workflow v2.0</title>
+  <desc id="desc">Workflow diagram for PMO intake from request capture through triage, enrichment, ClickUp creation and reporting.</desc>
+  <rect width="1440" height="880" rx="36" fill="#101720"/>
+  <text x="72" y="92" fill="#b8ff6a" font-family="Verdana, Geneva, sans-serif" font-size="34" font-weight="700">PMO Workflow v2.0</text>
+  <text x="72" y="132" fill="#d4e1e4" font-family="Verdana, Geneva, sans-serif" font-size="22">Structured project intake with AI-assisted triage and ClickUp task creation.</text>
+  <g stroke="#75d7ff" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M278 430h126"/>
+    <path d="M590 430h126"/>
+    <path d="M902 430h126"/>
+    <path d="M1214 430h74"/>
+  </g>
+  <g font-family="Verdana, Geneva, sans-serif">
+    <rect x="74" y="330" width="204" height="200" rx="28" fill="#102838" stroke="#75d7ff" stroke-width="3"/>
+    <text x="112" y="400" fill="#fff" font-size="24" font-weight="700">Capture</text>
+    <text x="112" y="442" fill="#c8d8dc" font-size="18">Stakeholder</text>
+    <text x="112" y="474" fill="#c8d8dc" font-size="18">request intake</text>
+    <rect x="386" y="330" width="204" height="200" rx="28" fill="#173229" stroke="#b8ff6a" stroke-width="3"/>
+    <text x="424" y="400" fill="#fff" font-size="24" font-weight="700">Triage</text>
+    <text x="424" y="442" fill="#c8d8dc" font-size="18">Priority, risk</text>
+    <text x="424" y="474" fill="#c8d8dc" font-size="18">and owner</text>
+    <rect x="698" y="330" width="204" height="200" rx="28" fill="#102838" stroke="#75d7ff" stroke-width="3"/>
+    <text x="736" y="400" fill="#fff" font-size="24" font-weight="700">Enrich</text>
+    <text x="736" y="442" fill="#c8d8dc" font-size="18">AI summary</text>
+    <text x="736" y="474" fill="#c8d8dc" font-size="18">and scope</text>
+    <rect x="1010" y="330" width="204" height="200" rx="28" fill="#102838" stroke="#75d7ff" stroke-width="3"/>
+    <text x="1048" y="400" fill="#fff" font-size="24" font-weight="700">Create</text>
+    <text x="1048" y="442" fill="#c8d8dc" font-size="18">ClickUp task</text>
+    <text x="1048" y="474" fill="#c8d8dc" font-size="18">with fields</text>
+    <rect x="174" y="626" width="1092" height="96" rx="24" fill="#1b2617" stroke="#b8ff6a" stroke-width="3"/>
+    <text x="224" y="686" fill="#fff" font-size="24" font-weight="700">Reporting loop: dashboards, follow-up reminders, governance trail and delivery visibility</text>
+  </g>
+</svg>
